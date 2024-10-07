@@ -120,10 +120,13 @@ h1 {
 }
 
 #sec2 div {
-  padding-right: 5px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-  /* figure out how to make form bigger */
+
 form {
   background-color: #1a1a1a;
   border: 2px solid #00FF00;
@@ -172,6 +175,12 @@ button#submit:hover {
 #sec3 {
   display: flex;
   justify-content: space-around;
+}
+
+#sec3 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* row 4 */
