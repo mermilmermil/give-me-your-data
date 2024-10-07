@@ -1,0 +1,229 @@
+
+
+
+/* overall */
+
+html {
+  background-color: black;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  color: #00FF00;
+}
+
+a {
+  color: #00FF00; 
+  text-decoration: none;
+}
+
+a:hover {
+  text-shadow: 0px 0px 8px #00FF00;
+}
+
+.b-data {
+  color: black;
+  background-color: #00FF00;
+  border: 2px solid #00FF00;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.b-data:hover {
+  background-color: black;
+  color: #00FF00;
+  border: 2px solid #99FF33;
+  text-shadow: 0px 0px 10px #99FF33;
+  animation: glitch 0.5s 1;
+}
+
+/* Glitch animation for buttons */
+@keyframes glitch {
+  0%, 100% {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+  33% {
+    clip-path: inset(20% 0% 30% 0%);
+  }
+  66% {
+    clip-path: inset(60% 0% 0% 0%);
+  }
+}
+
+/* header */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 0px;
+}
+
+header span {
+  color: #00FF00;
+  font-size: 2rem;
+  text-shadow: 0 0 8px #99FF33;
+}
+
+/* body */
+main {
+  color: #00FF00;
+}
+
+main h1, main h2 {
+  text-shadow: 0 0 8px #99FF33;
+}
+
+/* row 1 */
+
+#sec1 {
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#sec1 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+/* row 2 */
+#sec2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#sec2 div {
+  padding-right: 5px;
+}
+
+  /* figure out how to make form bigger */
+form {
+  background-color: #1a1a1a;
+  border: 2px solid #00FF00;
+  border-radius: 4%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 40%;
+  font-weight: bold;
+  box-shadow: 0 0 10px #99FF33;
+}
+
+input {
+  background-color: black;
+  color: #00FF00;
+  border: 2px solid #00FF00;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input::placeholder {
+  color: #99FF33;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #99FF33;
+}
+
+button#submit {
+  background-color: #00FF00;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+button#submit:hover {
+  background-color: black;
+  color: #00FF00;
+  text-shadow: 0px 0px 10px #99FF33;
+}
+
+/* row 3 */
+#sec3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* row 4 */
+#sec4 h2 {
+  text-align: center;
+}
+
+#review-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#review1, #review2, #review3 {
+  width: 20%;
+  background-color: #1a1a1a;
+  border: 2px solid #00FF00;
+  border-radius: 5%;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #99FF33;
+  color: #00FF00;
+}
+
+
+/* footer */
+footer {
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+footer a {
+  color: #00FF00;
+}
+
+footer a:hover {
+  text-shadow: 0px 0px 8px #99FF33;
+}
+
+/* media query */
+@media (max-width: 800px) {
+  header span {
+    font-size: 1.5rem;
+  }
+  form {
+    width: 90%;
+  }
+  body, html {
+    font-size: 14px;
+  }
+  #review-div {
+    flex-direction: column;
+    align-items: center;
+  }
+  #review1, #review2, #review3 {
+    width: 90%;
+    margin: 20px 10px;
+  }
+  
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer a {
+    margin-bottom: 10px;
+  }
+}
